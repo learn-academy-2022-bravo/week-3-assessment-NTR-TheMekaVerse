@@ -62,12 +62,19 @@
           }
           // No need to change anything ABOVE this line ^
 
+
+// #1: Added a semicolon after the close parenthesis that belongs to the outermost return.
+// #2: There were no container tags enclosing all of the code after the return. Added <> and </> accordingly.
+// #3: onClick function (line 68) was missing a call to its specific function. Both onClicks (line 68 & line 71) were missing the 'this' keyword.
+
+
           return(
+            <>
             <h1>Draw a Card</h1>
-            <button onClick={}>
+            <button onClick={this.drawCard}>
               Click to Draw a Card
             </button>
-            <button onClick={shuffle}>
+            <button onClick={this.shuffle}>
               Return Cards and Shuffle Deck
             </button>
             <div style={handStyles}>
@@ -79,7 +86,8 @@
                 )
               })}
             </div>
-          )
+            </>
+          );
         }
       }
 
@@ -89,3 +97,7 @@
     </script>
   </body>
 </html>
+
+
+
+
