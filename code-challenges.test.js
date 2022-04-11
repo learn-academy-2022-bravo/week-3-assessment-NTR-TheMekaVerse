@@ -99,14 +99,14 @@ fibonacci = (arrayLength) => {
       // .sort
 // Output: only number data types & in numerical order
 
-// describe("onlyOddNums", () => {
-//     const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
-//     const fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
-//     it("takes in an array and returns a new array of only odd numbers sorted from least to greatest", () => {
-//         expect(onlyOddNums(fullArr1)).toEqual([-9, 7, 9, 199])
-//         expect(onlyOddNums(fullArr2)).toEqual([-823, 7, 23])
-//     })
-// })
+describe("onlyOddNums", () => {
+    const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
+    const fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
+    it("takes in an array and returns a new array of only odd numbers sorted from least to greatest", () => {
+        expect(onlyOddNums(fullArr1)).toEqual([-9, 7, 9, 199])
+        expect(onlyOddNums(fullArr2)).toEqual([-823, 7, 23])
+    })
+})
 
 // RED TEST:      ReferenceError: onlyOddNums is not defined
 
@@ -117,10 +117,10 @@ fibonacci = (arrayLength) => {
 // Values in filtered array should meet both the criteria of number data type and odd
 
 
-// onlyOddNums = (array) => {
-//     let filterNums = array.filter(arrays => typeof arrays === "number" && arrays % 2 !== 0) 
-//         return filterNums.sort(function(a, b){return a-b})
-// }
+onlyOddNums = (array) => {
+    let filterNums = array.filter(arrays => typeof arrays === "number" && arrays % 2 !== 0) 
+        return filterNums.sort(function(a, b){return a-b})
+}
 
 
 // GREEN TEST:   PASS  week-3-assessment-NTR-TheMekaVerse/code-challenges.test.js
@@ -133,10 +133,9 @@ fibonacci = (arrayLength) => {
 
 // REFACTOR: Combine all code onto a single line
 
-// onlyOddNums = (array) => {
-//     return filterNums = array.filter(arrays => typeof arrays === "number" && arrays % 2 !== 0).sort(function(a, b){return a-b}) 
-
-// }
+onlyOddNums = (array) => {
+    return filterNums = array.filter(arrays => typeof arrays === "number" && arrays % 2 !== 0).sort(function(a, b){return a-b}) 
+}
 
 
 
@@ -160,17 +159,17 @@ fibonacci = (arrayLength) => {
     // Note: an empty string should return an empty string
 
 
-// describe("calcArray", () => {
-//     const numbersToAdd1 = [2, 4, 45, 9]
-//     const numbersToAdd2 = [0, 7, -8, 12]
-//     const numbersToAdd3 = []
-//     it("takes in an array and returns an array of the accumulating sum. An empty array should return an empty array", () => {
-//         expect(calcArray(numbersToAdd1)).toEqual([2, 6, 51, 60])
-//         expect(calcArray(numbersToAdd2)).toEqual([0, 7, -1, 11])
-//         expect(calcArray(numbersToAdd3)).toEqual([])
+describe("calcArray", () => {
+    const numbersToAdd1 = [2, 4, 45, 9]
+    const numbersToAdd2 = [0, 7, -8, 12]
+    const numbersToAdd3 = []
+    it("takes in an array and returns an array of the accumulating sum. An empty array should return an empty array", () => {
+        expect(calcArray(numbersToAdd1)).toEqual([2, 6, 51, 60])
+        expect(calcArray(numbersToAdd2)).toEqual([0, 7, -1, 11])
+        expect(calcArray(numbersToAdd3)).toEqual([])
 
-//     })
-// })
+    })
+})
 
 // RED TEST:    ReferenceError: calcArray is not defined
 
@@ -194,12 +193,12 @@ fibonacci = (arrayLength) => {
 
 // Update to first solution
 
-// calcArray = (input) => {
-//     for (let i = 1; i < input.length; i++){
-//          input[i] = input[i] + input[i - 1]
-//     }
-//     return input
-// }
+calcArray = (input) => {
+    for (let i = 1; i < input.length; i++){
+         input[i] = input[i] + input[i - 1]
+    }
+    return input
+}
 
 // GREEN TEST:    PASS  week-3-assessment-NTR-TheMekaVerse/code-challenges.test.js
 // Test Suites: 1 failed, 1 passed, 2 total  <--- This is still reading a test suite from week-2 assessment
@@ -210,7 +209,7 @@ fibonacci = (arrayLength) => {
 
 // Having trouble figuring out the appropriate syntax to include the formula that yields the desired result
 
-// calcArray = (input) => {
-//     let accumulatedSums = input.forEach((input[i]) => inputs[i] + inputs[i - 1])
-//     return accumulatedSums
-// }
+calcArray = (input) => {
+    let accumulatedSums = input.forEach((input[i]) => inputs[i] + inputs[i - 1])
+    return accumulatedSums
+}
